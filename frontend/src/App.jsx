@@ -3,7 +3,7 @@ import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import { Toaster } from "react-hot-toast";
 import Home from "./Pages/home";
 import NotFound from "./Pages/NotFound";
-import Success from "./Pages/success";
+import Success from "./Pages/Success";
 const App = () => {
   return <Router>
     <Routes>
