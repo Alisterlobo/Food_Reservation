@@ -17,12 +17,12 @@ const Reservation = () => {
 
         const handleReservation = async (e) => {
             e.preventDefault();
-            const API_BASE_URL = "https://food-reservation-i1cb.onrender.com";
+            // const API_BASE_URL = "https://food-reservation-i1cb.onrender.com";
 
             try{
-                const {data} = await axios.post(`${API_BASE_URL}/api/v1/reservation/send`,
+                // const {data} = await axios.post(`${API_BASE_URL}/api/v1/reservation/send`,
 
-                // const {data} = await axios.post("http://localhost:4000/api/v1/reservation/send",
+                const {data} = await axios.post("http://localhost:4000/api/v1/reservation/send",
                     {firstName, lastName, email, phone, date, time},
                     {
                         headers: {
