@@ -61,7 +61,7 @@ nav .navLinks .links a {
   letter-spacing: 1.4px;
 }
 nav .navLinks .links a:hover {
-  color: #21f036;
+  color: #393838;
   transition: 0.3s;
   cursor: pointer;
 }
