@@ -9,16 +9,14 @@ const app = express();
 dotenv.config({ path: "./config/config.env" });
 
 
-// app.use(cors({
-//     origin: [process.env.FORNTEND_URL],
-//     methods: ["POST"],
-//     credentials: true
-// }))
-
 app.use(cors({
-    origin: 'http://localhost:5173', // local frontend
+    origin: [process.env.FORNTEND_URL],
+    methods: ["POST"],
     credentials: true
-  }));
+}))
+
+
+
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true}));
