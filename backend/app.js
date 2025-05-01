@@ -22,17 +22,6 @@ app.use(cors({
   }));
   
 
-//sample
-// app.use(cors({
-//     origin: 
-//     process.env.FRONTEND_URL || "https://food-reservation-ia0msa8vs-alister-lobos-projects.vercel.app",
-//       methods: ["GET", "POST", "PUT", "DELETE"],
-//     credentials: true
-//   }));
-  
-
-
-
 app.use(express.json());
 app.use(express.urlencoded({ extended: true}));
 app.use('/api/v1/reservation',reservationRouter)
