@@ -16,11 +16,9 @@ dotenv.config({ path: "./config/config.env" });
 // }))
 
 app.use(cors({
-    origin: [
-      process.env.FRONTEND_URL,
-      "https://food-reservation-ia0msa8vs-alister-lobos-projects.vercel.app"
-    ],
-    methods: ["GET", "POST", "PUT", "DELETE"],
+    origin: 
+      process.env.FRONTEND_URL || "https://food-reservation-ia0msa8vs-alister-lobos-projects.vercel.app",
+      methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true
   }));
   
