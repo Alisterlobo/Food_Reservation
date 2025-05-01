@@ -5,3 +5,4 @@ app.listen(process.env.PORT, () => {
 });
 
 // FORNTEND_URL = http://localhost:5173
+// FORNTEND_URL=food-reservation-rho.vercel.app
