@@ -1,5 +1,5 @@
 import React from 'react';
-import { HiOutlineArrowCircleRight, HiOutlineArrowNarrowRight } from 'react-icons/hi';
+import { HiOutlineArrowNarrowRight } from 'react-icons/hi';
 import axios from 'axios';
 import { useState } from 'react';
 import toast from 'react-hot-toast';
@@ -18,7 +18,10 @@ const Reservation = () => {
         const handleReservation = async (e) => {
             e.preventDefault();
             try{
-                const {data} = await axios.post("http://localhost:4000/api/v1/reservation/send",
+                const API_BASE_URL = "https://food-reservation-i1cb.onrender.com";
+                const {data} = await axios.post(`${API_BASE_URL}/api/v1/reservation/send`,
+
+                // const {data} = await axios.post("http://localhost:4000/api/v1/reservation/send",
                     {firstName, lastName, email, phone, date, time},
                     {
                         headers: {
@@ -36,6 +39,7 @@ const Reservation = () => {
                 setDate("");
                 navigate("/success");
             }catch(error){
+                toast.error(error?.response?.data?.message || "Reservation failed");
                 toast.error(error.response.data.message);
             }
         }
@@ -98,7 +102,7 @@ const Reservation = () => {
                             />
                             
                         </div>
-                        <button type='submit' onClick={handleReservation}>RESERVE NOW{" "}
+                        <button type='submit' onSubmit={handleReservation}>RESERVE NOW{" "}
                                 <span>
                                     <HiOutlineArrowNarrowRight />
                                 </span>
