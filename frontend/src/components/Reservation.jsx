@@ -17,11 +17,12 @@ const Reservation = () => {
 
         const handleReservation = async (e) => {
             e.preventDefault();
-            try{
-                // const API_BASE_URL = "https://food-reservation-i1cb.onrender.com";
-                // const {data} = await axios.post(`${API_BASE_URL}/api/v1/reservation/send`,
+            const API_BASE_URL = "https://food-reservation-i1cb.onrender.com";
 
-                const {data} = await axios.post("http://localhost:4000/api/v1/reservation/send",
+            try{
+                const {data} = await axios.post(`${API_BASE_URL}/api/v1/reservation/send`,
+
+                // const {data} = await axios.post("http://localhost:4000/api/v1/reservation/send",
                     {firstName, lastName, email, phone, date, time},
                     {
                         headers: {
@@ -39,7 +40,7 @@ const Reservation = () => {
                 setDate("");
                 navigate("/success");
             }catch(error){
-                // toast.error(error?.response?.data?.message || "Reservation failed");
+                toast.error(error?.response?.data?.message || "Reservation failed");
                 toast.error(error.response.data.message);
             }
         }
