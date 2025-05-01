@@ -94,7 +94,7 @@ const Reservation = () => {
                                 className='email_tag' 
                                 value={email} 
                                 onChange={(e) => setEmail(e.target.value)} 
-                            />
+                            /> 
                             <input 
                                 type="tel" 
                                 placeholder='Phone' 
