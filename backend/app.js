@@ -8,13 +8,22 @@ import reservationRouter from './routes/reservationRoute.js'
 const app = express();
 dotenv.config({ path: "./config/config.env" });
 
+//original for localhost
+// app.use(cors({
+//     origin: [process.env.FORNTEND_URL],
+//     methods: ["POST"],
+//     credentials: true
+// }))
 
 app.use(cors({
-    origin: [process.env.FORNTEND_URL],
-    methods: ["POST"],
+    origin: [
+      process.env.FRONTEND_URL,
+      "https://food-reservation-ia0msa8vs-alister-lobos-projects.vercel.app"
+    ],
+    methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true
-}))
-
+  }));
+  
 
 
 
