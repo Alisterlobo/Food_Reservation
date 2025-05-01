@@ -9,12 +9,20 @@ const app = express();
 dotenv.config({ path: "./config/config.env" });
 
 // original for localhost
-app.use(cors({
-    origin: [process.env.FORNTEND_URL],
-    methods: ["POST"],
-    credentials: true
-}))
+// app.use(cors({
+//     origin: [process.env.FORNTEND_URL],
+//     methods: ["POST"],
+//     credentials: true
+// }))
 
+app.use(cors({
+    origin: process.env.FRONTEND_URL,
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    credentials: true
+  }));
+  
+
+//sample
 // app.use(cors({
 //     origin: 
 //     process.env.FRONTEND_URL || "https://food-reservation-ia0msa8vs-alister-lobos-projects.vercel.app",
