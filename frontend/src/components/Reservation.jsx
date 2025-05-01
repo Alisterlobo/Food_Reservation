@@ -12,7 +12,7 @@ const Reservation = () => {
     const [email, setEmail] = useState("");
     const [date, setDate] = useState("");
     const [time, setTime] = useState("");
-    const [phone, setPhone] = useState(0);
+    const [phone, setPhone] = useState("");
     const navigate = useNavigate();
 
         const handleReservation = async (e) => {
@@ -41,7 +41,7 @@ const Reservation = () => {
                 navigate("/success");
             }catch(error){
                 toast.error(error?.response?.data?.message || "Reservation failed");
-                toast.error(error.response.data.message);
+                // toast.error(error.response.data.message);
             }
         }
 
