@@ -1039,6 +1039,34 @@ footer .container .banner .right {
     font-size: 1.6rem;
   }
 }
+
+/* sample reservation */
+@media (max-width: 768px) {
+  .reservation .container .banner .reservation_form_box form div {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .reservation .container .banner .reservation_form_box {
+    width: 90%;
+    padding: 15px;
+  }
+
+  .reservation .container .banner .reservation_form_box form input,
+  .reservation .container .banner .reservation_form_box form button {
+    width: 100%;
+  }
+
+  .reservation .container .banner .reservation_form_box h1 {
+    font-size: 1.8rem;
+  }
+
+  .reservation .container .banner .reservation_form_box p {
+    font-size: 1rem;
+  }
+}
+
+
 /**********************************************************************************************************************/
 
 /******************* NOT FOUND PAGE STYLING **************/
